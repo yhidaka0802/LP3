@@ -9,10 +9,14 @@
 .header {
   &_top{
     position: fixed;
-    z-index: 5;
+    z-index: 10;
     width: 100%;
     border-top: 3px solid $cBlack;
     background-color: $cWhite;
+
+    @include mq('sp'){
+      border-top: none;
+    }
   }
 
   &_inner {
@@ -58,8 +62,9 @@
 
     @include mq('sp'){
       margin: 0 auto;
-      width: 90%;
-      height: 60vh;
+      left: 10%;
+      width: 80%;
+      height: 55vh;
     }
   }
 
@@ -73,11 +78,12 @@
     color: $cWhite;
 
     @include mq('sp'){
-      // z-index: 1;
-      bottom: 0;
+      left: 12%;
+      bottom: 5%;
       background-color: unset;
       color: $cGreen;
-      font-size: 22px;
+      font-size: 20px;
+      line-height: 1.5;
     }
   }
 }
@@ -294,10 +300,10 @@
     margin: 50px auto 0;
     width: 60%;
     border-collapse: collapse;
+
     @include mq('sp') {
       font-size: 12px;
     }
-
     @include mq('sp'){
       width: 85%;
     }
@@ -404,6 +410,7 @@
   .section_title {
     margin-bottom: 100px;
     color: $cGreen;
+
     @include mq('sp'){
       margin-bottom: 50px;
     }

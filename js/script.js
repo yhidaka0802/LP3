@@ -1,9 +1,17 @@
 'use strict';
 
+$(document).ready(function(){
+  let window = $(this).width();
+  let bp = 768;
+  if(window > bp){
+    $(".navnar").show();
+  }
+})
+
 $('.drawer1').click(function(){
   $(this).toggleClass('active');
   $('header').toggleClass('active');
-  $('.navbar').fadeToggle(500);
+  // $('.header_top').fadeIn(1000);
 });
 
 function fadeIn(){
@@ -71,7 +79,7 @@ $('#js-nav a').on('click', function(){
 
 const loadAnime = $('.load_animation');
 $(window).on('load', function(){
-  loadAnime.delay(1).fadeOut(1);
+  loadAnime.delay(2000).fadeOut(1000);
   loadAnime.delay(500).fadeOut(500,function(){
     $('body').addClass('appear');
   });
