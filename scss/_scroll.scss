@@ -1,0 +1,52 @@
+.fadeUp {
+  animation: fadeUpAnime 0.8s forwards;
+  opacity: 0;
+}
+
+.fadeUpTrigger,.rotateYTrigger, .fripLeftTrigger {
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.rotateY {
+  animation: rotateYAnime .8s forwards;
+  opacity: 0;
+}
+
+@keyframes rotateYAnime {
+  from{
+    transform: rotateY(0);
+    opacity: 0;
+  }
+  to{
+    transform: rotateY(-360deg);
+    opacity: 1;
+  }
+}
+
+.fripLeft {
+  animation: flipLeftAnime .8s forwards;
+  perspective-origin: left center;
+  opacity: 0;
+}
+
+@keyframes flipLeftAnime{
+  from{
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+  to{
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}

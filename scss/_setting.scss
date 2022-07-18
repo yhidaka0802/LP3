@@ -1,0 +1,47 @@
+$cBlack: #000;
+$cGreen: #119BA2;
+$cWhite: #fff;
+$cGray: #eee;
+$cGray_strong: #ccc;
+$cGray_weak: #f3f3f3;
+$cHamburg: #aaa;
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', serif;
+  font-family: 'Noto Sans JP', serif;
+  line-height: 1.8;
+  // letter-spacing: 1px;
+  word-break: break-all;
+  color: $cBlack;
+}
+
+main {
+  width: 100%;
+  background: $cWhite;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@import 'mixin';
+p{
+  @include mq('sp'){
+    font-size: 12px;
+  }
+}
